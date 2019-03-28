@@ -1,4 +1,4 @@
-const db = require('../data/dbConfig.js');
+const db = require('./data/dbConfig.js');
 
 module.exports = {
   getDishes,
@@ -13,6 +13,7 @@ function getDishes() {
 }
 
 function addDish(dish) {
+  console.log('adding dish');
   return db('dishes')
     .insert(dish);
 }
